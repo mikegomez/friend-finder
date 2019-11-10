@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
+//app.use(bodyParser.json());
 
 // Static files
 // needs to be called before the routes in order to work
@@ -22,4 +23,4 @@ require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
 //Listening to the port that was set up
-app.listen(port, () => console.log("Listening on port", port));
+app.listen(PORT, () => console.log("Listening on port", PORT));
